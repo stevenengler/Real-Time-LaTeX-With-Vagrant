@@ -57,9 +57,11 @@ class ChangeHandler(PatternMatchingEventHandler):
 			commands = []
 			commands.append("cd \""+project_directory+"\"")
 			commands.append(" && mkdir -p \""+compiled_path_relative_to_project_path+"\"")
-			commands.append(" && latexmk -pdf -recorder- -outdir=\""+compiled_path_relative_to_project_path+"\" -aux-directory=\""+compiled_path_relative_to_project_path+"\" -pdflatex='pdflatex -synctex=-1 -interaction=nonstopmode -file-line-error' \""+src_file_relative_to_project_path+"\"")
-			commands.append(" | grep -A 5 '.*:[0-9]*:.*\\|!.*'")
-			commands.append(" > \""+compiled_path_relative_to_project_path+'/'+filename+".err\"")
+			#commands.append(" && latexmk -pdf -recorder- -outdir=\""+compiled_path_relative_to_project_path+"\" -aux-directory=\""+compiled_path_relative_to_project_path+"\" -pdflatex='pdflatex -synctex=-1 -interaction=nonstopmode -file-line-error' \""+src_file_relative_to_project_path+"\"")
+			#commands.append(" | grep -A 5 '.*:[0-9]*:.*\\|!.*'")
+			#commands.append(" > \""+compiled_path_relative_to_project_path+'/'+filename+".err\"")
+			commands.append(" && sudo texliveonfly --terminal_only --compiler=latexmk --arguments='-pdf -recorder- -outdir=\""+compiled_path_relative_to_project_path+"\" -aux-directory=\""+compiled_path_relative_to_project_path+"\" -pdflatex='\"'\"'pdflatex -synctex=-1 -interaction=nonstopmode -file-line-error'\"'\"' ' \""+src_file_relative_to_project_path+"\"")
+			# This command for texliveonfly works (if the grep and append lines above are commented out), but it adds extra time to the compile time, even if all packages are installed. This is bad for the auto-update speed.
 			#
 			print ''.join(commands)
 			subprocess.call(''.join(commands), shell=True)
