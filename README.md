@@ -3,8 +3,8 @@ Easily set up a LaTeX environment with Vagrant on any operating system. This set
 
 ### Required Programs
 
- 1) [VirtualBox](https://www.virtualbox.org/)
- 2) [Vagrant](https://www.vagrantup.com/)
+ 1. [VirtualBox](https://www.virtualbox.org/)
+ 2. [Vagrant](https://www.vagrantup.com/)
 
 ### Recommended Programs (for Windows)
 
@@ -14,10 +14,10 @@ Easily set up a LaTeX environment with Vagrant on any operating system. This set
 
 ### How to Set Up
 
- 1) Install VirtualBox and Vagrant.
- 2) Open a terminal / command prompt in the directory of the Vagrantfile.
- 3) Run ```vagrant up``` to build and start the Vagrant environment. This will download Tex Live with some packages (approx 600mb total) and install it.
- 4) Run ```vagrant halt``` to shutdown the Vagrant virtual machine.
+ 1. Install VirtualBox and Vagrant.
+ 2. Open a terminal / command prompt in the directory of the Vagrantfile.
+ 3. Run ```vagrant up``` to build and start the Vagrant environment. This will download Tex Live with some packages (approx 600mb total) and install it.
+ 4. Run ```vagrant halt``` to shutdown the Vagrant virtual machine.
 
 ### How to Use
 
