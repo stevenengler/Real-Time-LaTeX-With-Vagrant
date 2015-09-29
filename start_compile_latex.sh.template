@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# This script starts the python script to compile LaTeX documents
+# You can copy this template to start_compile_latex.sh and modify the new file to fit your needs (the start_compile_latex.sh file is ignored by gitignore)
+
+# DO NOT MODIFY THE start_compile_latex.sh.template VERSION!
+
+cd /vagrant
+mkdir -p LaTeX_documents
+cd LaTeX_documents
+python ../compile_latex.py &
+# run the python script in the background

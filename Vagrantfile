@@ -95,6 +95,9 @@ Vagrant.configure(2) do |config|
   SHELL
   
   config.vm.provision "shell", run: "always", privileged: false, inline: <<-SHELL
+    if [ ! -f /vagrant/start_compile_latex.sh ]; then
+      cp /vagrant/start_compile_latex.sh.template /vagrant/start_compile_latex.sh
+    fi
     bash /vagrant/start_compile_latex.sh
   SHELL
 end
