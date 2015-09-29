@@ -1,0 +1,26 @@
+\documentclass[12pt]{article}
+
+\title{Real-Time-\LaTeX{}-With-Vagrant}
+\author{Steven Engler}
+\date{September 29, 2015}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Easily set up a LaTeX environment with Vagrant on any operating system. This sets up vanilla Tex Live on a Vagrant precise box and runs a python script to compile latex source code in real-time.
+
+\section{Project Directory}
+The project directory is the directory containing the \textit{latex\_project.config} file. This configuration file must contain one line (lines beginning with a '\#' character are ignored) that points to the \TeX{} file to be compiled. For example, if the file contains the single line (without the line number):
+
+\vspace*{0.5\baselineskip}
+1. \textit{/source/document.tex}
+\vspace*{0.5\baselineskip}
+
+\noindent then the file document.tex will be compiled with latexmk and pdflatex. The compilation occurs in the project directory, so all imports (including images) must be included with respect to the project directory.
+
+\section{Compile a Document}
+To compile a document (including this one) simply start the vagrant environment by running \textit{vagrant up} in the root directory (directory with the Vagrantfile) using the command line. This will build and start the virtual machine, and watch for changes to any *.tex files that are in the LaTeX\_documents directory and in a project directory. If a *.tex file is modified, it is automatically compiled into the \textit{compiled/} directory in the project directory.
+
+\end{document}

@@ -1,0 +1,3 @@
+To compile this document:
+
+To compile a document (including this one) simply start the vagrant environment by running "vagrant up" in the root directory (directory with the Vagrantfile) using the command line. This will build and start the virtual machine, and watch for changes to any *.tex files that are in the "LaTeX_documents" directory and in a project directory. If a *.tex file is modified, it is automatically compiled into the "compiled/" directory in the project directory.
