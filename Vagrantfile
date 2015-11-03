@@ -92,6 +92,7 @@ Vagrant.configure(2) do |config|
 	#
     sudo su -c "bash /vagrant/install_texlive.sh" vagrant
     sudo /usr/local/texlive/2015/bin/i386-linux/tlmgr install latexmk
+    sudo apt-get install ghostscript -y
   SHELL
   
   config.vm.provision "shell", run: "always", privileged: false, inline: <<-SHELL
