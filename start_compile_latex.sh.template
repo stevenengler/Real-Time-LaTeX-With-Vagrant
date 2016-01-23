@@ -8,5 +8,5 @@
 cd /vagrant
 mkdir -p LaTeX_documents
 cd LaTeX_documents
-python ../compile_latex.py &
+nohup python ../compile_latex.py &
 # run the python script in the background
