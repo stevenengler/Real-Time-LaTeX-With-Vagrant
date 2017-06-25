@@ -1,6 +1,8 @@
 # Real-Time-LaTeX-With-Vagrant
 Easily set up a LaTeX environment with Vagrant on any operating system. This sets up vanilla Tex Live on a Vagrant precise box and runs a python script to compile latex source code in real-time.
 
+**NOTE**: I have now switched to using TeX Live in the Windows 10 *Windows Subsystem for Linux* (WSL) for compiling LaTeX. It's faster, has support for inotify (instead of polling the hard drive for changes), and is easier to use. It is very similar to this project and can be found here: https://github.com/stevenengler/Real-Time-LaTeX.
+
 ### Required Programs
 
  1. [VirtualBox](https://www.virtualbox.org/)
